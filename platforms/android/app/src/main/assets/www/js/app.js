@@ -260,7 +260,7 @@ document.addEventListener('init', function (event) {
   }
 
 
-//map
+//map------------------------------------------
 if (page.id === 'mapPage') {
 
   var onSuccess = function(position) {
