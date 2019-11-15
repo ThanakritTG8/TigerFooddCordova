@@ -1,0 +1,30 @@
+<ons-page id="listmenu">
+    <ons-toolbar class="toolbars">
+        <div class="left">
+            <ons-back-button></ons-back-button>
+        </div>
+        <div class="center">
+            <div class="search">
+                <p style="text-align: center; margin-top: 10px;">
+                    <ons-search-input placeholder="Search"
+                        onchange="ons.notification.alert('Searched for: ' + this.value)">
+                    </ons-search-input>
+                </p>
+            </div>
+        </div>
+    </ons-toolbar>
+
+    <div id="menu">
+    </div>
+    <div id="list">
+        <div class="menuhead">
+            MENU
+        </div>
+    </div>
+    <div id="topping">
+        <div class="menuhead">
+            TOPPING
+        </div>
+    </div>
+
+</ons-page>
