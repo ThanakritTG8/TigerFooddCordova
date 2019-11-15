@@ -270,7 +270,7 @@ if (page.id === 'mapPage') {
     mapboxgl.accessToken =
       "pk.eyJ1IjoidGdyb2NrMTk5NyIsImEiOiJjazJsYXhiNmcwNTdxM2NscDU3M2tndzJrIn0.PpwD7OtiZwmYpr-kQuJv6A";
     var map = new mapboxgl.Map({
-      container: "map", // container id
+      container: "location", // container id
       style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
       center: [lng, lat], // starting position [lng, lat]
       zoom: 14 // starting zoom
@@ -297,10 +297,20 @@ if (page.id === 'mapPage') {
     marker.on("dragend", onDragEnd);
   };
 
+ 
+
   function onError(error) {
     alert("code: " + error.code + "\n" + "message: " + error.message + "\n");
   }
   navigator.geolocation.getCurrentPosition(onSuccess, onError);
+  $("#buttom-map").click(function() {
+    ons.notification.alert(
+      "Deliver : " + select_locationmap_lat + " , " + select_locationmap_lng
+    );
+
+    $("#myNavigator")[0].pushPage("home.html");
+  });
+  
 }
 
 
@@ -372,7 +382,7 @@ $("#sum").append(result);
         .auth()
         .signInWithEmailAndPassword(username, password)
         .then(function () {
-          content.load("Resturant_manu.html");
+          content.load("home.html");
         })
         .catch(function (error) {
           // Handle Errors here.
