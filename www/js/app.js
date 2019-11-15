@@ -222,7 +222,7 @@ document.addEventListener('init', function (event) {
         doc.data().menu.forEach(element => {
 
           var item = `<ons-card class="list" 
-          onclick="ons.notification.toast('Hi there!', { timeout: 1000, animation: 'fade' }); 
+          onclick="ons.notification.toast('Add to cart!', { timeout: 1000, animation: 'fade' }); 
           addtocart(${doc.data().resid},'${doc.data().resname}', '${element.list}', ${element.price});">
           <ons-row>
               <div class="left" style="width:50%">
@@ -240,7 +240,7 @@ document.addEventListener('init', function (event) {
         doc.data().topping.forEach(element => {
 
           var item = `<ons-card class="list" 
-          onclick="ons.notification.toast('Hi there!', { timeout: 1000, animation: 'fall' }); 
+          onclick="ons.notification.toast('Add to cart!!', { timeout: 1000, animation: 'fall' }); 
           addtocart(${doc.data().resid}, '${doc.data().resname}', '${element.type}', ${element.price});">
             <ons-row>
                 <div class="left" style="width:50%">
